@@ -1,0 +1,37 @@
+{
+  "name": "Twilio SMS -> IFTTT Integration",
+  "description": "Use SMS to send IFTTT events.",
+  "keywords": [
+    "node.js",
+    "API",
+    "twilio",
+    "expressjs",
+    "Express",
+    "Tutorial",
+    "Telephone API",
+    "Voice API",
+    "REST API",
+    "Demo",
+    "IFTTT"
+  ],
+  "repository": "https://github.com/escapologyBB/sms-helping-hand",
+  "logo": "https://s3-us-west-2.amazonaws.com/deved/twilio-logo.png",
+  "env": {
+    "IFTTT_KEY": {
+      "description": "Your IFTTT secret key",
+      "value": "enter_your_secret_key_here"
+    },
+    "TWILIO_AUTH_TOKEN": {
+      "description": "Your secret Twilio Auth token, find at: https://www.twilio.com/console",
+      "value": "enter_your_auth_token_here"
+    },
+    "PRODUCTION_URL": {
+      "description": "Once deployed, this will be your Twilio webhook URL. Your URL will be different based on the name you chose for this app, but should end with '.herokuapp.com/sms'",
+      "value": "https://change-this-to-your-heroku-app-name.herokuapp.com/sms"
+    },
+    "NODE_ENV": {
+      "description": "This should be set to 'production'",
+      "value": "production"
+    }
+  }
+}
