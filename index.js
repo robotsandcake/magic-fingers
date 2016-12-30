@@ -8,7 +8,13 @@ const client = require('request');
 const twilio = require('twilio');
 
 // Load configuration from the system environment and commands file
-const { IFTTT_KEY, PORT } = process.env;
+const { 
+  IFTTT_KEY, // IFTTT Secret key for webhook requests
+  PORT, // The TCP port to run the server on
+  TWILIO_AUTH_TOKEN, // Twilio auth token (find at twilio.com/console)
+  NODE_ENV, // Setting that indicates whether Node.js is in production/dev mode
+  PRODUCTION_URL // The Twilio webhook URL, like https://blah.herokuapp.com/sms
+} = process.env;
 const COMMANDS = require('./commands');
 
 // Create express app with body parser middleware
@@ -23,6 +29,20 @@ function sendEvent(evt, callback) {
 
 // Create route to handle incoming messages from Twilio
 app.post('/sms', (request, response) => {
+  // Validate that the incoming request is coming from Twilio when running in
+  // production
+  if (NODE_ENV === 'production') {
+    let fromTwilio = twilio.validateExpressRequest(request, TWILIO_AUTH_TOKEN, {
+      url: PRODUCTION_URL
+    });
+
+    // Only continue with the request if the incoming request is indeed from
+    // our Twilio number
+    if (!fromTwilio) {
+      return response.status(403).send('Unauthorized.');
+    } 
+  }
+
   // A TwiML response we will send back to Twilio
   let twiml = new twilio.TwimlResponse();
 
