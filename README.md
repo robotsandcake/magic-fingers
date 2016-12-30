@@ -35,6 +35,7 @@ No matter how or where you deploy this application, you'll need to configure a
 few [environment variables](https://en.wikipedia.org/wiki/Environment_variable).
 
 | Variable Name | Description |
+| --- | --- |
 | `IFTTT_KEY` | The secret key for your IFTTT account |
 | `TWILIO_AUTH_TOKEN` | A secret key from your Twilio account, found at [twilio.com/console](https://www.twilio.com/console). Required for securing the SMS feature in production. |
 | `NODE_ENV` | Indicates whether the application is in development or production mode - when deploying the app for usage, should be set to `production`. If you are hacking on the app locally, it can be omitted. |
