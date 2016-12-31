@@ -5,4 +5,5 @@ module.exports = {
   // A given IFTTT event
   Helping: 'red_flash_all',
   Assistance: 'blue_flash',
+  "Testing testing": 'twilio_test',
 };
