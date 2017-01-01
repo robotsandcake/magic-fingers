@@ -46,10 +46,16 @@ app.post('/sms', (request, response) => {
   // A TwiML response we will send back to Twilio
   let twiml = new twilio.TwimlResponse();
 
+  // get and convert message body to lowercase
+  let messageBody = request.body.Body;
+  if (messageBody) {
+    messageBody = messageBody.toLowerCase();
+  }
+
   // Iterate the list of commands and see which occur in the body of the SMS 
   let eventsToSend = [];
   Object.keys(COMMANDS).forEach((commandName) => {
-    if (request.body.Body.indexOf(commandName) > -1) {
+    if (messageBody.indexOf(commandName) > -1) {
       eventsToSend.push((callback) => {
         sendEvent(COMMANDS[commandName], callback);
       });
