@@ -60,7 +60,7 @@ form.
 If you'd prefer to deploy this app to Heroku from the command line, you'll need
 the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) installed.
 
-Clone this repository, and enter it's directory on your computer. Initialize the
+Clone this repository, and enter its directory on your computer. Initialize the
 app on your Heroku account with the following commands:
 
 ```bash
