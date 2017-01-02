@@ -1,4 +1,6 @@
-# Connect SMS to IFTTT
+# Magic Fingers #
+
+## Connect SMS to IFTTT
 
 This application scans incoming text messages from a Twilio number looking for
 special keywords (commands). These commands are then mapped to IFTTT Maker
