@@ -97,4 +97,4 @@ Once things are all set up, you can test the application by sending an SMS to yo
 
 ## License
 
-MIT
+Copyright (c) 2017 Stuart Turner (escapologybb)
