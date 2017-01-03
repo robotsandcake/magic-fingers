@@ -1,6 +1,6 @@
 {
-  "name": "Twilio SMS -> IFTTT Integration",
-  "description": "Use SMS to send IFTTT events.",
+  "name": "Magic Fingers",
+  "description": "Use SMS to trigger IFTTT events.",
   "keywords": [
     "node.js",
     "API",
@@ -12,10 +12,12 @@
     "Voice API",
     "REST API",
     "Demo",
+    "accessibility",
+    "disability",
     "IFTTT"
   ],
-  "repository": "https://github.com/escapologyBB/sms-helping-hand",
-  "logo": "https://s3-us-west-2.amazonaws.com/deved/twilio-logo.png",
+  "repository": "https://github.com/escapologyBB/magic-fingers",
+  "logo": "https://robots-cake-assets.s3.amazonaws.com/500-robot.png",
   "env": {
     "IFTTT_KEY": {
       "description": "Your IFTTT secret key",
