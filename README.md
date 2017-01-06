@@ -1,5 +1,7 @@
 # Magic Fingers #
 
+![Magic Fingers](magic-fingers.gif)
+
 ## Connect SMS Messages to IFTTT ##
 
 This application scans incoming SMS messages from your Twilio number for keywords (commands). You can set any keywords. Each command is mapped to an IFTTT Maker channel event and triggers a IFTTT recipe. By using Twilio directly, you can avoid some of the SMS channel limitations on IFTTT (such as the cost of the SMS messages if you're outside the US).
@@ -97,4 +99,4 @@ Once things are all set up, you can test the application by sending an SMS to yo
 
 ## License
 
-Copyright (c) 2017 Stuart Turner (escapologybb)
+MIT
