@@ -16,7 +16,7 @@
     "disability",
     "IFTTT"
   ],
-  "repository": "https://github.com/escapologyBB/magic-fingers",
+  "repository": "https://github.com/robotsandcake/magic-fingers",
   "logo": "https://robots-cake-assets.s3.amazonaws.com/500-robot.png",
   "env": {
     "IFTTT_KEY": {
